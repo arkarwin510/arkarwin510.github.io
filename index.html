@@ -1,273 +1,153 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="icon" href="akw.png" />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <link rel="manifest" href="manifest.json" />
-
-    <title>Arkar Win - Resume (Full-Stack Software Engineer)</title>
-    <meta name="keywords" content="Resume, DevOps Engineer, Arkar Win, IT Professional" />
-    <meta name="description"
-        content="Hello, I'm Arkar Win. This is my latest resume, showcasing my experience and skills as a DevOps Engineer. Feel free to contact me. Thank you for visiting :).">
-
-    <link rel="stylesheet" href="css/resume.css?v=1.0.0" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900,600' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arkar Win - Full-Stack Software Engineer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+      color: #333;
+    }
+    header {
+      background-color: #1976d2;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0.3rem 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #bbdefb;
+      gap: 1.5rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0d47a1;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #004ba0;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #1565c0;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.6;
+    }
+    ul li::marker {
+      color: #1976d2;
+    }
+    a {
+      color: #0d47a1;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="leftcontent-wrapper">
-                        <img src="img/aboutme.jpg" />
-                    </div>
-                    <div class="rightcontent-wrapper">
-                        <h1 class="hello">Hello, <small>I am</small></h1>
-                        <h1 class="name">Arkar Win</h1>
-                        <h4>Full Stack Developer</h4>
-                        <div class="contact-wrapper">
-                            <!-- <div class="content"><a href="https://www.johndoe.dev" target="_blank"> <i
-                                        class="fa fa-laptop"></i><strong> https://www.johndoe.dev</strong></a></div> -->
-                            <div class="content"><a href="mailto:john@doe.dev"> <i class="fa fa-envelope"></i>
-                                    arkarwin156439@gmail.com</a></div>
-                            <div class="content"><i class="fa fa-mobile"></i>(+95) 9260343375</div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-                <!-- Working Experience //-->
-                <div class="content-section fadeInLeft">
-                    <div class="leftcontent-wrapper">
-                        <h4 class="content-title">
-                            Working <br />Experiences <br /><small>(5 Years Experiences)</small>
-                        </h4>
-                    </div>
-
-                    <div class="rightcontent-wrapper">
-                        <div class="devops-experiences">
-                            <h4><b>Full Stack Developer </b> - 4 years experiences </h4>
-                            <ul class="two-columns-list">
-                                <li>
-                                    <div class="years">July 2019 - Current</div>
-                                    <div class="company-name"><strong>Full Stack Developer</strong> at <a
-                                            href="https://atkhayar.com/">One Atkhayar Co., Ltd</a></div>
-                                    <div class="clearfix"></div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="it-experiences">
-                            <h4><b>Junior Software Developer</b> - 1 years experiences</h4>
-                            <ul class="two-columns-list">
-                                <li>
-                                    <div class="years">2018 - 2019</div>
-                                    <div class="company-name"><strong>Software Developer</strong> at <a
-                                            href="https://www.globalwave.com.mm/">Innovative Global Wave Technology, Yangon</a></div>
-                                    <div class="clearfix"></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-                <!-- Skill set //-->
-                <div class="content-section page-break">
-                    <div class="leftcontent-wrapper">
-                        <h4 class="content-title">
-                            Skill set
-                        </h4>
-                    </div>
-
-                    <div class="rightcontent-wrapper">
-                        <p>
-                            &nbsp; &nbsp; &nbsp; I am a skilled Full Stack engineer with expertise in front-end,
-                            back-end, and launch the software applications. I have hands-on experience
-                            with background like Ionic, Flutter, Angular, Firebase, and GCP. Proficient in scripting
-                            languages such as Nodejs and Ruby.
-                        </p>
-                        <ul class="skill-metrics">
-                            <li>
-                                <label>Ionic</label>
-                                <div class="progress progress-info">
-                                    <div class="bar" style="width: 90%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <label>Flutter</label>
-                                <div class="progress progress-info">
-                                    <div class="bar" style="width: 75%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <label>Firebase</label>
-                                <div class="progress progress-info">
-                                    <div class="bar" style="width: 90%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <label>Node Js</label>
-                                <div class="progress progress-info">
-                                    <div class="bar" style="width: 70%;"></div>
-                                </div>
-                            </li>
-                        </ul>
-                        <br />
-                        <h4>Projects I've Worked On</h4>
-                        <ul class="experience-list">
-                            <li>
-                                <a href="https://play.google.com/store/search?q=Shi%20del&c=apps&hl=en&gl=US" target="_blank" class="img-wrapper">
-                                    <img src="img/shidel.png" />
-                                </a>
-                                <a href="https://play.google.com/store/search?q=Shi%20del&c=apps&hl=en&gl=US" target="_blank">Shi Del</a>
-                            </li>
-                            <li>
-                                <a href="https://play.google.com/store/search?q=chat%20chin&c=apps&hl=en&gl=US" target="_blank" class="img-wrapper">
-                                    <img src="img/chatchin.png" />
-                                </a>
-                                <a href="https://play.google.com/store/search?q=chat%20chin&c=apps&hl=en&gl=US" target="_blank">Chat Chin</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-                <!-- Languages //-->
-                <div class="content-section">
-                    <div class="leftcontent-wrapper">
-                        <h4 class="content-title">
-                            Languages
-                        </h4>
-                    </div>
-
-                    <div class="rightcontent-wrapper">
-                        <ul class="two-columns-list language-list">
-                            <li>
-                                <div class="pull-left language">English</div>
-                                <div class="pull-left language"><small>Read/Write</small> - <strong>Fluent</strong></div>
-                                <div class="pull-left language"><small>Speaking</small> - <strong>Fluent</strong></div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <div class="pull-left language">Myanmar</div>
-                                <div class="pull-left language"><small>Read/Write</small> - <strong>Native</strong></div>
-                                <div class="pull-left language"><small>Speaking</small> - <strong>Native</strong></div>
-                                <div class="clearfix"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-                <!-- Education //-->
-                <div class="content-section page-break">
-                    <div class="leftcontent-wrapper">
-                        <h4 class="content-title">
-                            Education
-                        </h4>
-                    </div>
-
-                    <div class="rightcontent-wrapper">
-                        <ul class="two-columns-list education">
-                            <li>
-                                <div class="years">2013 - 2018</div>
-                                <div class="company-name"><strong><i class="fa fa-graduation-cap"></i> Bachelor of Computer Science (Software Engineering)</strong></div>
-                                <div class="clearfix"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-                <!-- Personal Information //-->
-                <div class="content-section">
-                    <div class="leftcontent-wrapper">
-                        <h4 class="content-title">
-                            Personal <br /> Information
-                        </h4>
-                    </div>
-
-                    <div class="rightcontent-wrapper">
-
-                        <ul class="two-columns-list personal-info-list">
-                            <li>
-                                <div>Date of Birth</div>
-                                <div><strong><u>5<sup>th</sup> Oct, 1997</u></strong></div>
-                                <div>Age</div>
-                                <div><strong><u>26 years</u></strong></div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <div>Nationality</div>
-                                <div><strong><u>Myanmar</u></strong></div>
-                                <div>Race</div>
-                                <div><strong><u>Burmese</u></strong></div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <div>Martital Status</div>
-                                <div><strong><u>Single</u></strong></div>
-                                <div class="clearfix"></div>
-                            </li>
-                        </ul>
-                        <br>
-                        <p>
-                            &nbsp; &nbsp; &nbsp; I am a dedicated full-stack engineer passionate about to create
-                            full development life-cycle. In my previous roles, I played a
-                            key role in implementing product requirement to digital platform.
-                            I am always eager to learn and adapt to new technologies in the
-                            ever-evolving software development landscape.
-                        </p>
-                        <p>
-                            &nbsp; &nbsp; &nbsp; In my free time, I contribute to open-source projects and participate
-                            in tech meetups. I believe in the power of collaboration and continuous improvement. Let's
-                            connect and discuss how we can enhance the efficiency of your IT operations!
-                        </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-
-                <!-- Contact Information //-->
-                <div class="content-section">
-                    <div class="leftcontent-wrapper">
-                        <h4 class="content-title">
-                            Contact Me
-                        </h4>
-                    </div>
-
-
-                    <div class="rightcontent-wrapper">
-                        <h3> Contact Me<small> with email or phone.</small></h3>
-                        <img src="img/resume-arrow.png" class="resume-arrow" />
-                        <img src="img/hand-drawing-circle.png" class="contact-circle" />
-                        <div class="salary-contact-wrapper">
-                            <div class="email"> &nbsp;<a href="mailto:thixpin@devktops.com"><i
-                                        class="fa fa-envelope"></i>arkarwin156439@gmail.com</a></div>
-                            <div class="phone"><i class="fa fa-mobile"></i> +95 9 260 343 375</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <br /><br /><br /><br />
-    <br /><br /><br /><br />
+  <header>
+    <img src="img/aboutme.jpg" alt="Profile Image">
+    <h1>Arkar Win</h1>
+    <p>Full-Stack Software Engineer</p>
+    <p>Email: arkarwin156439@gmail.com | Phone: +959260343375</p>
+    <p><a href="https://www.linkedin.com/in/arkarwin" target="_blank">LinkedIn Profile</a></p>
+    <p>Address: No. 34A, Kwet Thit 2 street, Insein Township, Yangon, Myanmar</p>
+  </header>
+  <nav>
+    <a href="#education">Education</a>
+    <a href="#skills">Key Skills</a>
+    <a href="#experience">Employment</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+  </nav>
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>Bachelor of Computer Science (Software Engineering)</strong> — University of Information Technology (UIT), Dec 2013 - Nov 2018</p>
+    <p>GPA: 3.7/4.0 (A-)</p>
+  </section>
+  <section id="skills">
+    <h2>Key Skills</h2>
+    <ul>
+      <li>Flutter, Dart, Ionic, Angular, JavaScript, TypeScript, HTML/CSS</li>
+      <li>Clean architecture, State management (Provider, Riverpod, BLoC)</li>
+      <li>Firebase (Auth, Firestore, Realtime DB, Cloud Functions, App Check)</li>
+      <li>RESTful APIs, Node.js, Ruby on Rails, Docker-based backend</li>
+      <li>Testing (Flutter, Jasmine/Karma, Firebase Crashlytics)</li>
+      <li>DevOps: GCP, Docker, Git/Bitbucket, CI/CD, Firebase CLI</li>
+      <li>Deployment & Analytics: App Stores, Firebase App Distribution</li>
+      <li>Search: Typesense, Algolia, Performance profiling, Lazy loading</li>
+      <li>Tools: Jira, Confluence, Slack, Notion</li>
+      <li>Soft skills: Research, Fast learning, Agile collaboration</li>
+    </ul>
+  </section>
+  <section id="experience">
+    <h2>Employment</h2>
+    <p><strong>One Atkhayar Co., Ltd</strong> — Full-Stack Software Engineer (July 2019 - Present)</p>
+    <ul>
+      <li>Led Flutter Merchant App with Clean Architecture and modular design</li>
+      <li>Maintained Shidel & Chat Chin apps (Ionic/Angular) with cross-platform support</li>
+      <li>Migrated legacy Ionic features to Flutter, improving performance</li>
+      <li>Integrated Firebase services and Ruby on Rails backend APIs</li>
+      <li>Built CI/CD pipelines and managed GCP VM deployments</li>
+    </ul>
+    <p><strong>Innovative Global Wave Technology</strong> — Junior Developer (June 2018 - March 2019)</p>
+    <ul>
+      <li>Developed Blood Donation Web App using Angular 6 and C# .NET</li>
+      <li>Created admin dashboards for Microfinance data with charts</li>
+      <li>Implemented Angular unit testing (Karma/Jasmine) with code coverage</li>
+      <li>Worked on YCDC payment gateway and backend testing</li>
+    </ul>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Morse Code Recognition with LSTM-CTC</strong> — Audio decoding using LSTM, MFCC, CTC (IEEE Published)</li>
+      <li><strong>Rain Prediction System</strong> — Weather classification using Naive Bayes</li>
+      <li><strong>Password Cracking Simulation</strong> — Explored password security vulnerabilities and mitigations</li>
+      <li><strong>Zipline Safety Analysis</strong> — Risk analysis using FMEA, PHA, and FTA</li>
+    </ul>
+  </section>
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>System Development Workshop — Fujitsu (2017)</li>
+      <li>ITPEC Information Technology Passport Examination — MCF (2017)</li>
+    </ul>
+  </section>
 </body>
-
 </html>
