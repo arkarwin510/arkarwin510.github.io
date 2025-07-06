@@ -7,16 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Roboto', sans-serif;
       background: #f4f6f8;
       color: #333;
+      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
     }
     header {
       background: #212121;
       color: #fff;
       padding: 4rem 2rem;
       text-align: center;
+      animation: fadeIn 1s ease-out;
     }
     header h1 {
       font-size: 2.5rem;
@@ -31,15 +36,20 @@
       justify-content: center;
       background-color: #424242;
       padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     nav a {
       color: #fff;
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffca28;
     }
     section {
       max-width: 1000px;
@@ -47,7 +57,9 @@
       padding: 2rem;
       background: #fff;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      transition: all 0.4s ease-in-out;
+      animation: slideUp 1s ease;
     }
     h2 {
       color: #1565c0;
@@ -69,6 +81,30 @@
     }
     a {
       color: #1565c0;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0d47a1;
+    }
+    .image-banner {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      margin: 2rem auto 0;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -80,6 +116,7 @@
     <p><a href="https://www.linkedin.com/in/arkarwin" target="_blank" style="color:#90caf9">LinkedIn Profile</a></p>
     <p>No. 34A, Kwet Thit 2 street, Insein Township, Yangon, Myanmar</p>
   </header>
+  <img src="https://cdn.pixabay.com/photo/2015/05/15/14/47/computer-768608_1280.jpg" class="image-banner" alt="Programmer working">
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
