@@ -1,153 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arkar Win - Full-Stack Software Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkar Win | Full-Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+      font-family: 'Roboto', sans-serif;
+      background: #f4f6f8;
       color: #333;
     }
     header {
-      background-color: #1976d2;
-      color: white;
+      background: #212121;
+      color: #fff;
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 2rem 1rem;
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid white;
     }
     header h1 {
-      margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
     header p {
-      margin: 0.3rem 0;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: #bbdefb;
-      gap: 1.5rem;
+      background-color: #424242;
       padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
     nav a {
+      color: #fff;
+      margin: 0 1rem;
       text-decoration: none;
-      color: #0d47a1;
       font-weight: bold;
-      transition: color 0.3s;
     }
     nav a:hover {
-      color: #004ba0;
+      text-decoration: underline;
     }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
-      background: white;
-      border-radius: 10px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     h2 {
       color: #1565c0;
-      border-bottom: 2px solid #90caf9;
-      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     ul {
-      padding-left: 1.2rem;
-      line-height: 1.6;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
     }
-    ul li::marker {
-      color: #1976d2;
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #212121;
+      color: white;
+      margin-top: 2rem;
     }
     a {
-      color: #0d47a1;
+      color: #1565c0;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="img/aboutme.jpg" alt="Profile Image">
     <h1>Arkar Win</h1>
     <p>Full-Stack Software Engineer</p>
     <p>Email: arkarwin156439@gmail.com | Phone: +959260343375</p>
-    <p><a href="https://www.linkedin.com/in/arkarwin" target="_blank">LinkedIn Profile</a></p>
-    <p>Address: No. 34A, Kwet Thit 2 street, Insein Township, Yangon, Myanmar</p>
+    <p><a href="https://www.linkedin.com/in/arkarwin" target="_blank" style="color:#90caf9">LinkedIn Profile</a></p>
+    <p>No. 34A, Kwet Thit 2 street, Insein Township, Yangon, Myanmar</p>
   </header>
   <nav>
-    <a href="#education">Education</a>
-    <a href="#skills">Key Skills</a>
-    <a href="#experience">Employment</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#certificates">Certificates</a>
   </nav>
-  <section id="education">
-    <h2>Education</h2>
-    <p><strong>Bachelor of Computer Science (Software Engineering)</strong> — University of Information Technology (UIT), Dec 2013 - Nov 2018</p>
-    <p>GPA: 3.7/4.0 (A-)</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>A passionate and experienced full-stack developer with strong mobile-first development expertise in Flutter and Angular. Adept at solving complex engineering problems, building scalable apps, and collaborating in cross-functional agile teams.</p>
   </section>
   <section id="skills">
-    <h2>Key Skills</h2>
+    <h2>Skills</h2>
     <ul>
       <li>Flutter, Dart, Ionic, Angular, JavaScript, TypeScript, HTML/CSS</li>
-      <li>Clean architecture, State management (Provider, Riverpod, BLoC)</li>
-      <li>Firebase (Auth, Firestore, Realtime DB, Cloud Functions, App Check)</li>
-      <li>RESTful APIs, Node.js, Ruby on Rails, Docker-based backend</li>
-      <li>Testing (Flutter, Jasmine/Karma, Firebase Crashlytics)</li>
-      <li>DevOps: GCP, Docker, Git/Bitbucket, CI/CD, Firebase CLI</li>
-      <li>Deployment & Analytics: App Stores, Firebase App Distribution</li>
-      <li>Search: Typesense, Algolia, Performance profiling, Lazy loading</li>
-      <li>Tools: Jira, Confluence, Slack, Notion</li>
-      <li>Soft skills: Research, Fast learning, Agile collaboration</li>
+      <li>Firebase, Node.js, Ruby on Rails, RESTful APIs</li>
+      <li>Clean Architecture, State Management (Provider, Riverpod, BLoC)</li>
+      <li>Testing: Jasmine, Karma, Flutter Widget Testing, Firebase Crashlytics</li>
+      <li>Google Cloud Platform, Docker, Git, Bitbucket, CI/CD pipelines</li>
+      <li>Search: Typesense, Algolia, Lazy loading, Performance profiling</li>
+      <li>Tools: Jira, Confluence, Notion, Slack</li>
     </ul>
   </section>
   <section id="experience">
-    <h2>Employment</h2>
-    <p><strong>One Atkhayar Co., Ltd</strong> — Full-Stack Software Engineer (July 2019 - Present)</p>
+    <h2>Experience</h2>
+    <h3>One Atkhayar Co., Ltd (Jul 2019 - Present)</h3>
     <ul>
-      <li>Led Flutter Merchant App with Clean Architecture and modular design</li>
-      <li>Maintained Shidel & Chat Chin apps (Ionic/Angular) with cross-platform support</li>
-      <li>Migrated legacy Ionic features to Flutter, improving performance</li>
-      <li>Integrated Firebase services and Ruby on Rails backend APIs</li>
-      <li>Built CI/CD pipelines and managed GCP VM deployments</li>
+      <li>Developed Flutter-based Merchant App using Clean Architecture and modular UI design</li>
+      <li>Led the migration of legacy Ionic apps to Flutter</li>
+      <li>Built and deployed apps on App Store, Play Store, and Huawei Gallery</li>
+      <li>Integrated Firebase (Firestore, Auth, Realtime DB, Cloud Functions)</li>
+      <li>Built CI/CD pipelines and managed deployments on GCP</li>
     </ul>
-    <p><strong>Innovative Global Wave Technology</strong> — Junior Developer (June 2018 - March 2019)</p>
+    <h3>Innovative Global Wave Technology (Jun 2018 - Mar 2019)</h3>
     <ul>
-      <li>Developed Blood Donation Web App using Angular 6 and C# .NET</li>
-      <li>Created admin dashboards for Microfinance data with charts</li>
-      <li>Implemented Angular unit testing (Karma/Jasmine) with code coverage</li>
-      <li>Worked on YCDC payment gateway and backend testing</li>
+      <li>Built Angular/C#.NET Blood Donation Web App</li>
+      <li>Created data dashboards with Chart.js and ngx-charts</li>
+      <li>Wrote unit tests using Karma and Jasmine with coverage reporting</li>
     </ul>
   </section>
   <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Morse Code Recognition with LSTM-CTC</strong> — Audio decoding using LSTM, MFCC, CTC (IEEE Published)</li>
-      <li><strong>Rain Prediction System</strong> — Weather classification using Naive Bayes</li>
-      <li><strong>Password Cracking Simulation</strong> — Explored password security vulnerabilities and mitigations</li>
-      <li><strong>Zipline Safety Analysis</strong> — Risk analysis using FMEA, PHA, and FTA</li>
+      <li><strong>Morse Code Recognition</strong> — LSTM-CTC Model for audio decoding (IEEE)</li>
+      <li><strong>Rain Prediction</strong> — Naive Bayes classifier on weather data</li>
+      <li><strong>Password Cracking</strong> — Simulated attacks using Ophcrack</li>
+      <li><strong>Zipline Safety Analysis</strong> — FMEA, FTA, PHA methodology</li>
     </ul>
   </section>
   <section id="certificates">
     <h2>Certificates</h2>
     <ul>
       <li>System Development Workshop — Fujitsu (2017)</li>
-      <li>ITPEC Information Technology Passport Examination — MCF (2017)</li>
+      <li>ITPEC IT Passport — MCF (2017)</li>
     </ul>
   </section>
+  <footer>
+    <p>© 2025 Arkar Win. All rights reserved.</p>
+  </footer>
 </body>
 </html>
