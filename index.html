@@ -3,178 +3,987 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arkar Win | Full-Stack Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Arkar Win | Full-Stack Software Engineer</title>
+  <meta name="description" content="Arkar Win — Full-Stack Software Engineer specializing in Flutter, Firebase, and GCP. Building scalable web & mobile solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html {
-      scroll-behavior: smooth;
+    :root {
+      --bg0: #070A12;
+      --bg1: #0B1022;
+      --card: rgba(255, 255, 255, 0.08);
+      --card2: rgba(255, 255, 255, 0.06);
+      --stroke: rgba(255, 255, 255, 0.14);
+      --text0: rgba(255, 255, 255, 0.92);
+      --text1: rgba(255, 255, 255, 0.74);
+      --text2: rgba(255, 255, 255, 0.58);
+      --accent: #7C5CFF;
+      --accent2: #22D3EE;
+      --warn: #FBBF24;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      --shadow2: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --radius: 18px;
+      --radius2: 14px;
+      --container: 1120px;
     }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #f4f6f8;
-      color: #333;
-      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text0);
+      background: radial-gradient(1200px 600px at 30% -10%, rgba(124, 92, 255, 0.45), transparent 60%),
+                  radial-gradient(900px 500px at 85% 5%, rgba(34, 211, 238, 0.35), transparent 55%),
+                  radial-gradient(800px 600px at 60% 110%, rgba(251, 191, 36, 0.12), transparent 60%),
+                  linear-gradient(180deg, var(--bg0), var(--bg1));
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    header {
-      background: #212121;
-      color: #fff;
-      padding: 4rem 2rem;
-      text-align: center;
-      animation: fadeIn 1s ease-out;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #424242;
-      padding: 1rem;
+
+    section { scroll-margin-top: 86px; }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 2px solid rgba(124, 92, 255, 0.9); outline-offset: 3px; border-radius: 10px; }
+
+    .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+
+    .topbar {
       position: sticky;
       top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(7, 10, 18, 0.55);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+
+    .topbar::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(124, 92, 255, 0.75), rgba(34, 211, 238, 0.6), transparent);
+      opacity: 0.35;
+      pointer-events: none;
     }
-    nav a:hover {
-      color: #ffca28;
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      gap: 14px;
     }
-    section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      transition: all 0.4s ease-in-out;
-      animation: slideUp 1s ease;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
-    h2 {
-      color: #1565c0;
-      margin-bottom: 1rem;
+
+    .brand-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(124, 92, 255, 0.95), rgba(34, 211, 238, 0.65));
+      box-shadow: 0 14px 36px rgba(124, 92, 255, 0.25);
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      flex: 0 0 auto;
     }
-    ul {
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
+
+    .brand-badge span { font-size: 14px; font-weight: 800; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
-    ul li {
-      margin-bottom: 0.5rem;
+
+    .nav a {
+      font-size: 13px;
+      color: var(--text1);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
+      will-change: transform;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #212121;
-      color: white;
-      margin-top: 2rem;
+
+    .nav a.is-active {
+      color: var(--text0);
+      background: rgba(124, 92, 255, 0.14);
+      border-color: rgba(124, 92, 255, 0.35);
     }
-    a {
-      color: #1565c0;
-      transition: color 0.3s ease;
+
+    .nav a:hover {
+      color: var(--text0);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+      transform: translateY(-1px);
     }
-    a:hover {
-      color: #0d47a1;
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text0);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      user-select: none;
     }
-    .image-banner {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      margin: 2rem auto 0;
+
+    .btn:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.09); border-color: rgba(255, 255, 255, 0.22); }
+
+    .btn-primary {
+      border: 1px solid rgba(124, 92, 255, 0.55);
+      background: linear-gradient(135deg, rgba(124, 92, 255, 0.95), rgba(34, 211, 238, 0.5));
+      box-shadow: 0 16px 36px rgba(124, 92, 255, 0.22);
+    }
+
+    .btn-primary:hover { border-color: rgba(124, 92, 255, 0.85); }
+
+    .hero {
+      padding: 56px 0 10px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .hero .subtitle {
+      margin-top: 12px;
+      font-size: clamp(15px, 1.35vw, 18px);
+      color: var(--text1);
+      line-height: 1.55;
+    }
+
+    .hero .chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+
+    .chip {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text1);
+      font-size: 13px;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: radial-gradient(600px 220px at 20% 0%, rgba(124, 92, 255, 0.55), transparent 55%),
+                  radial-gradient(520px 240px at 90% 20%, rgba(34, 211, 238, 0.35), transparent 60%);
+      opacity: 0.85;
+      pointer-events: none;
+      filter: blur(0.2px);
+    }
+
+    .hero-card-inner { position: relative; display: grid; gap: 14px; }
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar img {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: var(--shadow2);
+    }
+
+    .avatar .name { font-weight: 700; }
+    .avatar .role { font-size: 13px; color: var(--text1); margin-top: 2px; }
+
+    .meta {
+      display: grid;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text1);
+    }
+
+    .meta a { color: var(--text0); text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.35); text-underline-offset: 3px; }
+    .meta a:hover { text-decoration-color: rgba(34, 211, 238, 0.75); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .section p.lead {
+      margin: 0;
+      color: var(--text1);
+      line-height: 1.7;
+      max-width: 70ch;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card p { margin: 0; }
+
+    .card-link {
       display: block;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      animation: fadeIn 2s ease-in;
+      border-radius: var(--radius);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .card-link:hover .card { border-color: rgba(34, 211, 238, 0.35); }
+
+    .card:hover { transform: translateY(-3px); border-color: rgba(124, 92, 255, 0.35); background: rgba(255, 255, 255, 0.075); }
+
+    .card h3 { margin: 0 0 6px; font-size: 16px; letter-spacing: -0.01em; }
+    .muted { color: var(--text2); }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+    .pill {
+      font-size: 12px;
+      color: var(--text1);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 20px;
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .timeline-item .when { color: var(--text2); font-size: 14px; margin-bottom: 4px; }
+    .timeline-item .where { font-weight: 700; margin-bottom: 2px; }
+    .timeline-item ul { margin: 14px 0 0; padding-left: 20px; color: var(--text1); line-height: 1.75; }
+    .timeline-item li { margin: 8px 0; }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+      margin-bottom: 28px;
+    }
+
+    .kpi {
+      padding: 14px;
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .kpi .num { font-size: 20px; font-weight: 750; letter-spacing: -0.02em; }
+    .kpi .label { font-size: 12px; color: var(--text2); margin-top: 4px; }
+
+    .projects-grid { grid-template-columns: repeat(12, 1fr); }
+
+    .project {
+      grid-column: span 12;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      border-color: rgba(124, 92, 255, 0.35);
+      background: rgba(255, 255, 255, 0.075);
+    }
+
+    .project .thumb-wrap {
+      flex: 0 0 120px;
+      height: 120px;
+      position: relative;
+    }
+
+    .project .thumb {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      object-fit: cover;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .project:hover .thumb {
+      transform: scale(1.02);
+      box-shadow: var(--shadow2);
+    }
+
+    .project .thumb-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, transparent 40%, rgba(7, 10, 18, 0.65));
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .project .thumb { display: block; }
+
+    .project .content {
+      flex: 1;
+      display: grid;
+      gap: 8px;
+    }
+
+    .project .actions {
+      margin-top: 8px;
+    }
+
+    .project .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .project .tag { font-size: 12px; color: rgba(34, 211, 238, 0.9); }
+
+    .inline-link {
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.35);
+      text-underline-offset: 3px;
+    }
+
+    .inline-link:hover { text-decoration-color: rgba(34, 211, 238, 0.75); }
+
+    .edu {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .edu-logo {
+      width: 84px;
+      height: 84px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.06);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .edu-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+    @media (max-width: 960px) {
+      .kpi-row { grid-template-columns: 1fr; }
+      .edu { grid-template-columns: 1fr; }
+      .edu-logo { width: 100%; height: 88px; }
+      .project { flex-direction: column; text-align: center; }
+      .project .thumb-wrap { flex: 0 0 auto; width: 100%; max-width: 200px; margin: 0 auto; }
+    }
+
+    .footer {
+      padding: 36px 0 50px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 10px;
+      color: var(--text2);
+    }
+
+    .footer a { text-decoration: underline; text-underline-offset: 3px; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes floatGlow {
+      0% { transform: translate3d(0, 0, 0); filter: saturate(1.1); }
+      50% { transform: translate3d(0, -10px, 0); filter: saturate(1.25); }
+      100% { transform: translate3d(0, 0, 0); filter: saturate(1.1); }
+    }
+
+    .hero-card { animation: floatGlow 7s ease-in-out infinite; }
+
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .project { grid-column: span 12; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { transition: none; }
+      .btn, .nav a, .card { transition: none; }
+      .hero-card { animation: none; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Arkar Win</h1>
-    <p>Full-Stack Software Engineer</p>
-    <p>Email: arkarwin156439@gmail.com | Phone: +959260343375</p>
-    <p><a href="https://www.linkedin.com/in/arkarwin" target="_blank" style="color:#90caf9">LinkedIn Profile</a></p>
-    <p>No. 34A, Kwet Thit 2 street, Insein Township, Yangon, Myanmar</p>
-  </header>
-  <img src="https://cdn.pixabay.com/photo/2015/05/15/14/47/computer-768608_1280.jpg" class="image-banner" alt="Programmer working">
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#certificates">Certificates</a>
-  </nav>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>A passionate and experienced full-stack developer with strong mobile-first development expertise in Flutter and Angular. Adept at solving complex engineering problems, building scalable apps, and collaborating in cross-functional agile teams.</p>
-  </section>
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Flutter, Dart, Ionic, Angular, JavaScript, TypeScript, HTML/CSS</li>
-      <li>Firebase, Node.js, Ruby on Rails, RESTful APIs</li>
-      <li>Clean Architecture, State Management (Provider, Riverpod, BLoC)</li>
-      <li>Testing: Jasmine, Karma, Flutter Widget Testing, Firebase Crashlytics</li>
-      <li>Google Cloud Platform, Docker, Git, Bitbucket, CI/CD pipelines</li>
-      <li>Search: Typesense, Algolia, Lazy loading, Performance profiling</li>
-      <li>Tools: Jira, Confluence, Notion, Slack</li>
-    </ul>
-  </section>
-  <section id="experience">
-    <h2>Experience</h2>
-    <h3>One Atkhayar Co., Ltd (Jul 2019 - Present)</h3>
-    <ul>
-      <li>Developed Flutter-based Merchant App using Clean Architecture and modular UI design</li>
-      <li>Led the migration of legacy Ionic apps to Flutter</li>
-      <li>Built and deployed apps on App Store, Play Store, and Huawei Gallery</li>
-      <li>Integrated Firebase (Firestore, Auth, Realtime DB, Cloud Functions)</li>
-      <li>Built CI/CD pipelines and managed deployments on GCP</li>
-    </ul>
-    <h3>Innovative Global Wave Technology (Jun 2018 - Mar 2019)</h3>
-    <ul>
-      <li>Built Angular/C#.NET Blood Donation Web App</li>
-      <li>Created data dashboards with Chart.js and ngx-charts</li>
-      <li>Wrote unit tests using Karma and Jasmine with coverage reporting</li>
-    </ul>
-  </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Morse Code Recognition</strong> — LSTM-CTC Model for audio decoding (IEEE)</li>
-      <li><strong>Rain Prediction</strong> — Naive Bayes classifier on weather data</li>
-      <li><strong>Password Cracking</strong> — Simulated attacks using Ophcrack</li>
-      <li><strong>Zipline Safety Analysis</strong> — FMEA, FTA, PHA methodology</li>
-    </ul>
-  </section>
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <ul>
-      <li>System Development Workshop — Fujitsu (2017)</li>
-      <li>ITPEC IT Passport — MCF (2017)</li>
-    </ul>
-  </section>
-  <footer>
-    <p>© 2025 Arkar Win. All rights reserved.</p>
-  </footer>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner" data-reveal>
+        <a class="brand" href="#top">
+          <div class="brand-badge" aria-hidden="true"><span>AW</span></div>
+          <div>Arkar Win</div>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#digital-profile">Digital Profile</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div data-reveal>
+            <h1>
+              Full‑Stack Software Engineer
+              <span style="color: rgba(34, 211, 238, 0.95);">building scalable</span>
+              web & mobile solutions.
+            </h1>
+            <p class="subtitle">
+              Specializing in Flutter, Firebase & GCP — delivering clean architecture, fast UI/UX, and production-grade reliability.
+            </p>
+
+            <div class="chip-row" aria-label="Highlights">
+              <div class="chip">Flutter • Multi-flavor • Clean Architecture</div>
+              <div class="chip">Firebase • Cloud Functions • App Check</div>
+              <div class="chip">GCP • Docker • CI/CD</div>
+              <div class="chip">Angular • RxJS • Material</div>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn" href="CV.txt" target="_blank" rel="noopener">Open CV.txt</a>
+              <a class="btn" href="https://www.linkedin.com/in/arkarwin" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+
+          <aside class="hero-card" data-reveal aria-label="Quick profile">
+            <div class="hero-card-inner">
+              <div class="avatar">
+                <img src="img/aboutme.jpg" alt="Arkar Win">
+                <div>
+                  <div class="name">Arkar Win</div>
+                  <div class="role">Senior Software Engineer • Flutter • Backend APIs</div>
+                </div>
+              </div>
+              <div class="meta">
+                <div><span class="muted">Location:</span> Yangon, Myanmar</div>
+                <div><span class="muted">Email:</span> <a href="mailto:arkarwin.uit@gmail.com">arkarwin.uit@gmail.com</a></div>
+                <div><span class="muted">Phone:</span> <a href="tel:+959260343375">+95 9 260 343 375</a></div>
+              </div>
+              <div class="pill-row" aria-label="Focus areas">
+                <div class="pill">UI/UX & Accessibility</div>
+                <div class="pill">Mobile-first delivery</div>
+                <div class="pill">Performance & reliability</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>About</h2>
+            <p class="lead">
+              Passionate Full‑Stack Software Engineer with over 5 years of experience in developing robust web and mobile applications using Flutter, Firebase, and GCP. Committed to delivering scalable solutions and continuously exploring new technologies to enhance user experiences.
+            </p>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card" data-reveal style="grid-column: span 7;">
+            <h3>What I deliver</h3>
+            <p class="muted" style="margin: 0; line-height: 1.75; color: var(--text1);">
+              Production-ready apps with strong engineering fundamentals: modular UI, state management, testability, CI/CD, and pragmatic performance improvements.
+            </p>
+          </div>
+          <div class="card" data-reveal style="grid-column: span 5;">
+            <h3>Quick summary</h3>
+            <p class="muted" style="margin: 0; line-height: 1.75; color: var(--text1);">
+              Mobile-first engineer with strong UI/UX instincts and hands-on backend/cloud experience.
+              Comfortable owning features end-to-end: design → implementation → testing → release.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Education</h2>
+            <p class="lead">University of Information Technology (UIT).</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card" data-reveal style="grid-column: span 12;">
+            <div class="edu">
+              <div class="edu-logo" aria-label="UIT logo placeholder">
+                <!-- Replace src with your chosen logo:
+                     - img/uit-logo-only.png (logo only)
+                     - img/uit-logo-long.png (logo + text)
+                -->
+                <img src="img/UIT-Logo-big.png" alt="">
+              </div>
+              <div>
+                <h3 style="margin: 0 0 6px;">Bachelor of Computer Science (Software Engineering)</h3>
+                <div class="muted" style="color: var(--text1); line-height: 1.7;">
+                  University of Information Technology (UIT) • Dec 2013 – Nov 2018 • GPA: 3.7/4.0 (A-)
+                </div>
+                <div class="pill-row">
+                  <div class="pill">Software Engineering</div>
+                  <div class="pill">Strong fundamentals</div>
+                  <div class="pill">Research mindset</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Skills</h2>
+            <p class="lead">Frontend, backend, cloud, testing — built for shipping and scale.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>Frontend & Frameworks</h3>
+            <div class="pill-row">
+              <div class="pill">Angular</div>
+              <div class="pill">RxJS</div>
+              <div class="pill">Angular Material</div>
+              <div class="pill">TypeScript</div>
+              <div class="pill">JavaScript</div>
+              <div class="pill">Flutter</div>
+              <div class="pill">Provider / Riverpod / BLoC</div>
+              <div class="pill">Ionic</div>
+              <div class="pill">Responsive UI/UX</div>
+              <div class="pill">Accessibility</div>
+            </div>
+          </div>
+
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>Backend, Cloud & DevOps</h3>
+            <div class="pill-row">
+              <div class="pill">Firebase</div>
+              <div class="pill">Cloud Functions</div>
+              <div class="pill">App Check</div>
+              <div class="pill">Node.js</div>
+              <div class="pill">Ruby on Rails</div>
+              <div class="pill">NestJS</div>
+              <div class="pill">Express</div>
+              <div class="pill">PostgreSQL</div>
+              <div class="pill">GCP</div>
+              <div class="pill">Docker</div>
+              <div class="pill">CI/CD</div>
+            </div>
+          </div>
+
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>Testing & Quality</h3>
+            <div class="pill-row">
+              <div class="pill">Jasmine</div>
+              <div class="pill">Karma</div>
+              <div class="pill">Flutter widget/integration testing</div>
+              <div class="pill">Crashlytics</div>
+              <div class="pill">Performance debugging</div>
+            </div>
+          </div>
+
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>Search & Optimization</h3>
+            <div class="pill-row">
+              <div class="pill">Typesense</div>
+              <div class="pill">Algolia</div>
+              <div class="pill">Lazy loading</div>
+              <div class="pill">API caching</div>
+              <div class="pill">Performance profiling</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Experience</h2>
+            <p class="lead">Professional experience and key achievements.</p>
+          </div>
+        </div>
+
+        <div class="kpi-row" data-reveal>
+          <div class="kpi">
+            <div class="num">5+ years</div>
+            <div class="label">Professional engineering experience</div>
+          </div>
+          <div class="kpi">
+            <div class="num">Mobile + Web</div>
+            <div class="label">Flutter, Ionic/Angular, backend APIs</div>
+          </div>
+          <div class="kpi">
+            <div class="num">Cloud-ready</div>
+            <div class="label">Firebase, GCP, Docker, CI/CD</div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-reveal>
+            <div>
+              <div class="when">Aug 2025 – Present</div>
+              <div class="where">Myanmar Information Technology Pte Ltd</div>
+              <div class="muted">Senior Software Engineer</div>
+            </div>
+            <div>
+              <ul>
+                <li>Generated and published a Flutter package to pub.dev for organizational use, including proper documentation, version control, and maintenance.</li>
+                <li>Implemented QR code generation and scanning functionalities for internal apps to streamline user check-in and data verification processes.</li>
+                <li>Contributed to team efforts to solve technical problems and implement new features in internal Office Attendance and Office General apps using Flutter.</li>
+                <li>Developed and integrated backend APIs using NestJS and Express.js, designing RESTful services and managing PostgreSQL databases to support mobile and internal applications.</li>
+                <li>Designed database schemas, handled data modeling, and optimized queries in PostgreSQL to ensure performance and data integrity.</li>
+                <li>Collaborated with cross-functional teams to ensure smooth integration, testing, and deployment of new functionalities.</li>
+                <li>Supported agile development processes by participating in code reviews and ongoing feature optimization.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div>
+              <div class="when">Jul 2019 – Aug 2025</div>
+              <div class="where">One Atkhayar Co., Ltd (Yangon)</div>
+              <div class="muted">Junior Developer → Full‑Stack Software Engineer</div>
+            </div>
+            <div>
+              <ul>
+                <li>Led the development and launched consumer apps (Ionic - Angular Framework) Shi Del and Chat Chin on App Store, Google Play, and Huawei App Gallery, adding marketplace functionality and app maintenance.</li>
+                <li>Designed and built the Merchant App (Flutter) for internal business operations and vendor management, focusing on modular, reusable UI components, multi-platform responsive design, and scalable architecture.</li>
+                <li>Built responsive, accessible UI layouts across iOS and Android using Ionic (Angular), integrating Figma and InVision designs into pixel-perfect interfaces with custom widgets, theme management, and consistent design systems.</li>
+                <li>Implemented multi-flavor Ionic app setups and CI/CD pipelines for seamless testing and deployment across staging and production environments.</li>
+                <li>Developed and maintained unit tests for Ionic (Angular) components and services using Karma and Jasmine, and applied node code coverage tools to ensure quality thresholds and identify untested paths in the codebase.</li>
+                <li>Integrated Firebase services (Authentication, Firestore, Realtime Database, Cloud Functions in Node.js) with Remote Config for dynamic version and feature control without app updates in Ionic (Angular).</li>
+                <li>Integrated backend APIs (built in Ruby on Rails) to support real-time transactions, content updates, and data syncing.</li>
+                <li>Deployed and maintained Docker-based APIs on Google Cloud VM Instances, ensuring performance, reliability, and scalability of backend infrastructure.</li>
+                <li>Configured OneSignal for push notifications and Branch.io for deep linking, improving user engagement, retention, and cross-channel activation.</li>
+                <li>Developed fast, intuitive type-ahead search components using Typesense and Algolia, boosting discoverability and search relevance.</li>
+                <li>Used Git, Bitbucket, and Sourcetree for version control, led code reviews, and managed Jira sprints and tasks to deliver features in agile cycles.</li>
+                <li>Authored and maintained technical specs, flow diagrams, and system documentation in Confluence, improving team communication and onboarding.</li>
+                <li>Integrated npm artifact registry to streamline package reuse across Ionic (Angular) apps, improving maintainability and development speed.</li>
+                <li>Researched and resolved complex Ionic (Angular) issues independently, improving performance, crash resilience, and cross-platform edge case handling (e.g., permissions, background services).</li>
+                <li>Applied state management patterns like Provider, Riverpod, and BLoC for scalable, maintainable front-end architecture in Flutter for Merchant App.</li>
+                <li>Implemented Clean Architecture in Flutter by separating presentation, domain, and data layers, using principles like dependency inversion, use case abstraction, and repository pattern.</li>
+                <li>Self-taught and resolved advanced issues in Ionic - Angular Framework, Flutter contributing to performance profiling, bug fixing, and platform-specific optimizations (e.g., background services, permissions).</li>
+                <li>Continuously contributed to code quality, maintenance and bug fixing in both Ionic-Angular and Flutter, taking ownership of platform-specific edge cases.</li>
+                <li>Self-learned and customized a Ruby on Rails open-source eCommerce project, gaining strong understanding of Rails architecture, routing, ActiveRecord ORM, service layers, and gem ecosystem.</li>
+                <li>Analyzed and understood full project structure, including models, controllers, views, background jobs, initializers, and environment configurations.</li>
+                <li>Designed and developed a custom Ruby gem to extend and tailor core eCommerce functionality to align with organizational business requirements, maintaining modularity and upgrade compatibility.</li>
+                <li>Containerized and deployed the Ruby on Rails application using Docker images on Google Cloud VM instances, configuring IP address, environment variables, and database connections.</li>
+                <li>Configured network settings, domain mapping, SSL setup, and API connectivity between the Rails backend and Play Store mobile applications, ensuring secure and stable communication.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div>
+              <div class="when">Jun 2018 – Mar 2019</div>
+              <div class="where">Innovative Global Wave Technology (Yangon)</div>
+              <div class="muted">Junior Developer</div>
+            </div>
+            <div>
+              <ul>
+                <li>Built a Blood Donation Web Application using Angular 6, C# .NET, and SQL, focusing on responsive design, real-time donor data updates, and secure form submissions.</li>
+                <li>Researched and documented development patterns for Angular 6 and Angular 7, producing internal guides and architecture references for a blood donation platform with team collaboration.</li>
+                <li>Created an Admin Dashboard (Angular) for Microfinance Data Visualization, implementing dynamic charts (e.g., bar, line, pie) using libraries like Chart.js and ngx-charts to represent loan performance, repayment history, and customer distribution.</li>
+                <li>Developed Angular unit tests using Karma and Jasmine, ensuring robust test coverage for components and services; applied code coverage tools to monitor and maintain quality thresholds across builds.</li>
+                <li>Contributed data export features for microfinance applications, enabling efficient downloading of transaction lists and loan history in Excel and CSV formats.</li>
+                <li>Managed and maintained backend APIs for Microfinance solutions, integrating with C# .NET services and handling secure data operations.</li>
+                <li>Collaborated on YCDC (Yangon City Development Committee) payment gateway system, building and testing .NET backend APIs and contributing to unit testing for financial transaction reliability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Projects</h2>
+            <p class="lead">Selected projects with live links.</p>
+          </div>
+        </div>
+
+        <div class="grid projects-grid">
+          <article class="project" data-reveal>
+            <div class="thumb-wrap">
+              <img class="thumb" src="img/shidel.png" alt="Shi Del app">
+            </div>
+            <div class="content">
+              <div class="row">
+                <h3>Shi Del</h3>
+                <div class="tag">Ionic + Angular</div>
+              </div>
+              <p class="muted" style="color: var(--text1); line-height: 1.7;">Consumer app shipped to multiple app stores with ongoing improvements.</p>
+              <div class="actions">
+                <a class="inline-link" href="https://apps.apple.com/us/app/shi-del/id1612929510" target="_blank" rel="noopener">View on App Store</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="thumb-wrap">
+              <img class="thumb" src="img/chatchin.png" alt="Chat Chin app">
+            </div>
+            <div class="content">
+              <div class="row">
+                <h3>Chat Chin</h3>
+                <div class="tag">Ionic + Angular</div>
+              </div>
+              <p class="muted" style="color: var(--text1); line-height: 1.7;">Cross-platform delivery with performance, UX, and stability work.</p>
+              <div class="actions">
+                <a class="inline-link" href="https://chat-chin.com/" target="_blank" rel="noopener">Open chat-chin.com</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="thumb-wrap">
+              <img class="thumb" src="img/leetdev.png" alt="Morse code research">
+            </div>
+            <div class="content">
+              <div class="row">
+                <h3>Morse Code Audio Recognition</h3>
+                <div class="tag">LSTM‑CTC • MFCC</div>
+              </div>
+              <p class="muted" style="color: var(--text1); line-height: 1.7;">Thesis research: deep learning model for Morse code recognition from audio.</p>
+              <div class="actions">
+                <a class="inline-link" href="https://ieeexplore.ieee.org/document/10181830" target="_blank" rel="noopener">Read IEEE paper</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="thumb-wrap">
+              <img class="thumb" src="img/mmunicode.png" alt="Backend engineering">
+            </div>
+            <div class="content">
+              <div class="row">
+                <h3>Backend APIs & Data Systems</h3>
+                <div class="tag">NestJS • Express • PostgreSQL</div>
+              </div>
+              <p class="muted" style="color: var(--text1); line-height: 1.7;">REST APIs, schema design, and performance tuning for production workloads.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Certificates</h2>
+            <p class="lead">Workshops and qualifications.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>System Development Workshop</h3>
+            <div class="muted">Fujitsu • 2017</div>
+          </div>
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>IT Passport Examination</h3>
+            <div class="muted">ITPEC & MCF • 2017</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <h2>Contact</h2>
+            <p class="lead">Let’s build something reliable, fast, and beautiful.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>Email</h3>
+            <p class="muted" style="margin: 0; color: var(--text1);">Primary: <a href="mailto:arkarwin.uit@gmail.com">arkarwin.uit@gmail.com</a></p>
+          </div>
+          <div class="card" data-reveal style="grid-column: span 6;">
+            <h3>Phone</h3>
+            <p class="muted" style="margin: 0; color: var(--text1);"><a href="tel:+959260343375">+95 9 260 343 375</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container" data-reveal>
+        <div style="display:flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center;">
+          <div>© 2026 Arkar Win</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+
+      var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+      var navById = {};
+      navLinks.forEach(function (a) {
+        var id = (a.getAttribute('href') || '').slice(1);
+        if (id) navById[id] = a;
+      });
+
+      if (prefersReducedMotion) {
+        nodes.forEach(function (el) { el.classList.add('reveal'); el.classList.add('is-visible'); });
+        return;
+      }
+
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      nodes.forEach(function (el) {
+        el.classList.add('reveal');
+        var delay = el.getAttribute('data-reveal-delay');
+        if (delay) el.style.transitionDelay = String(delay);
+        obs.observe(el);
+      });
+
+      var sectionNodes = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+      var activeObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.getAttribute('id');
+          navLinks.forEach(function (a) { a.classList.remove('is-active'); });
+          if (id && navById[id]) navById[id].classList.add('is-active');
+        });
+      }, { rootMargin: '-30% 0px -60% 0px', threshold: 0.01 });
+
+      sectionNodes.forEach(function (s) { activeObs.observe(s); });
+    })();
+  </script>
 </body>
 </html>

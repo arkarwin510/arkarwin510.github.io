@@ -1,0 +1,90 @@
+ Arkar Win
+Full-Stack Software Engineer | Specializing in Flutter, Firebase & GCP | Building Scalable Web & Mobile Solutions
+Current Address: No. 34A, Kwet Thit 2 street, Insein Township, Yangon, Myanmar.
+Mobile:  +959260343375   arkarwin.uit@gmail.com       https://www.linkedin.com/in/arkarwin  
+SUMMARY
+Passionate Full-Stack Software Engineer with over 5 years of experience in developing robust web and mobile applications using Flutter, Firebase, and GCP. Committed to delivering scalable solutions and continuously exploring new technologies to enhance user experiences.
+
+EDUCATION 
+Bachelor of Computer Science (Software Engineering)		Dec 2013 - Nov 2018	
+University of Information Technology (UIT)
+GPA: 3.7/4.0 (A-)
+
+KEY SKILLS
+Frontend & Frameworks: Angular (component architecture, RxJS, Angular Material), TypeScript, JavaScript, Flutter (multi-flavor, Provider/Riverpod/BLoC), Ionic (Capacitor/Cordova), responsive UI/UX, accessibility, SPA development, deep linking (Branch.io), push notifications (OneSignal).
+Backend & APIs: RESTful API development (Node.js, Ruby on Rails), Firebase (Auth, Firestore, Realtime DB, Cloud Functions, App Check), Dockerized deployment on GCP VM.
+Testing & Quality: Jasmine, Karma, Flutter widget/integration testing, Firebase Crashlytics, performance debugging, error monitoring.
+DevOps & Cloud: GCP, Docker, Git/Bitbucket (CI/CD), npm registry, Firebase CLI, Flutter build automation, AWS.
+App Distribution: Play Store & App Store deployment, Firebase App Distribution, Remote Config, Analytics.
+Search & Optimization: Typesense, Algolia, lazy loading, API caching, performance profiling (Flutter).
+Collaboration Tools: Jira, Confluence, Git, Slack, Notion.
+Soft Skills: Fast learner, problem-solving, cross-functional communication, Agile/Scrum, continuous improvement mindset.
+EMPLOYMENT
+Myanmar Information Technology Pte Ltd	      August 2025  -  Present Senior Software Engineer
+Generated and published a Flutter package to pub.dev for organizational use, including proper documentation, version control, and maintenance.
+Implemented QR code generation and scanning functionalities for internal apps to streamline user check-in and data verification processes.
+Contributed to team efforts to solve technical problems and implement new features in internal Office Attendance and Office General apps using Flutter.
+Developed and integrated backend APIs using NestJS and Express.js, designing RESTful services and managing PostgreSQL databases to support mobile and internal applications.
+Designed database schemas, handled data modeling, and optimized queries in PostgreSQL to ensure performance and data integrity.
+Collaborated with cross-functional teams to ensure smooth integration, testing, and deployment of new functionalities.
+Supported agile development processes by participating in code reviews and ongoing feature optimization.
+
+One Atkhayar, Co., Ltd (Yangon, Myanmar) 	     July 2019 -  August 2025 
+Junior Developer → Full-Stack Software Engineer 
+Led the development and launched consumer apps (Ionic - Angular Framework)  Shidel and Chat Chin on App Store, Google Play, and Huawei App Gallery, adding marketplace functionality and app maintenance.
+Designed and built the Merchant App (Flutter) for internal business operations and vendor management, focusing on modular, reusable UI components, multi-platform responsive design, and scalable architecture.
+Built responsive, accessible UI layouts across iOS and Android using Ionic (Angular), integrating Figma and InVision designs into pixel-perfect interfaces with custom widgets, theme management, and consistent design systems.
+Implemented multi-flavor ionic app setups and CI/CD pipelines for seamless testing and deployment across staging, and production environments.
+Developed and maintained unit tests for Ionic (Angular) components and services using Karma and Jasmine, and applied node code coverage tools to ensure quality thresholds and identify untested paths in the codebase.
+Integrated Firebase services (Authentication, Firestore, Realtime Database, Cloud Functions in Node.js) with Remote Config for dynamic version and feature control without app updates in Ionic (Angular).
+Integrated backend APIs (built in Ruby on Rails) to support real-time transactions, content updates, and data syncing.
+Deployed and maintained Docker-based APIs on Google Cloud VM Instances, ensuring performance, reliability, and scalability of backend infrastructure.
+Configured OneSignal for push notifications and Branch.io for deep linking, improving user engagement, retention, and cross-channel activation.
+Developed fast, intuitive type-ahead search components using Typesense and Algolia, boosting discoverability and search relevance.
+Used Git, Bitbucket, and Sourcetree for version control, led code reviews, and managed Jira sprints and tasks to deliver features in agile cycles.
+Authored and maintained technical specs, flow diagrams, and system documentation in Confluence, improving team communication and onboarding.
+Integrated npm artifact registry to streamline package reuse across Ionic (Angular) apps, improving maintainability and development speed.
+Researched and resolved complex Ionic (Angular)  issues independently, improving performance, crash resilience, and cross-platform edge case handling (e.g., permissions, background services).
+Applied state management patterns like Provider, Riverpod, and BLoC for scalable, maintainable front-end architecture in Flutter for Merchant App.
+Implemented Clean Architecture in Flutter by separating presentation, domain, and data layers, using principles like dependency inversion, use case abstraction, and repository pattern.
+Self-taught and resolved advanced issues in Ionic - Angular Framework, Flutter contributing to performance profiling, bug fixing, and platform-specific optimizations (e.g., background services, permissions).
+Continuously contributed to code quality, maintenance and bug fixing in both Ionic-Angular and Flutter, taking ownership of platform-specific edge cases.
+Self-learned and customized a Ruby on Rails open-source eCommerce project, gaining strong understanding of Rails architecture, routing, ActiveRecord ORM, service layers, and gem ecosystem.
+Analyzed and understood full project structure, including models, controllers, views, background jobs, initializers, and environment configurations.
+Designed and developed a custom Ruby gem to extend and tailor core eCommerce functionality to align with organizational business requirements, maintaining modularity and upgrade compatibility.
+Containerized and deployed the Ruby on Rails application using Docker images on Google Cloud VM instances, configuring ip address, environment variables, and database connections.
+Configured network settings, domain mapping, SSL setup, and API connectivity between the Rails backend and Play Store mobile applications, ensuring secure and stable communication.
+
+Innovative Global Wave Technology - Yangon, Myanmar
+Junior Developer                   	        June 2018 - March 2019
+Built a Blood Donation Web Application using Angular 6, C# .NET, and SQL, focusing on responsive design, real-time donor data updates, and secure form submissions.
+Researched and documented development patterns for Angular 6 and Angular 7, producing internal guides and architecture references for a blood donation platform with team collaboration.
+Created an Admin Dashboard (Angular) for Microfinance Data Visualization, implementing dynamic charts (e.g., bar, line, pie) using libraries like Chart.js and ngx-charts to represent loan performance, repayment history, and customer distribution.
+Developed Angular unit tests using Karma and Jasmine, ensuring robust test coverage for components and services; applied code coverage tools to monitor and maintain quality thresholds across builds.
+Contribute data export features for microfinance applications, enabling efficient downloading of transaction lists and loan history in Excel and CSV formats.
+Managed and maintained backend APIs for Microfinance solutions, integrating with C# .NET services and handling secure data operations.
+Collaborated on YCDC (Yangon City Development Committee) payment gateway system, building and testing .NET backend APIs and contributing to unit testing for financial transaction reliability.
+
+PROJECTS
+University of Information Technology (UIT) – Master Degree Thesis      
+Morse Code Audio Recognition using LSTM-CTC Model                                              February 2023
+Research Proposal Paper: https://ieeexplore.ieee.org/document/10181830
+Developed a deep learning model to recognize Morse code from audio using Long Short-Term Memory (LSTM) networks.
+Created a custom Morse code audio dataset by converting text characters into audio signals.
+Utilized Mel-frequency Cepstral Coefficients (MFCCs) for feature extraction from audio.
+Applied Connectionist Temporal Classification (CTC) for accurate sequence-to-label mapping.
+Aimed to support audio-based Morse code interpretation, especially for emergency (SOS) applications in maritime communication.
+Technologies: Python, TensorFlow/Keras, Audio Processing, LSTM, MFCC, CTC
+
+CERTIFICATES and OTHER QUALIFICATIONS
+System Development Workshop, Fujitsu		             2017
+Information Technology Passport Examination, ITPEC & MCF		2017
+
+REFEREES
+Mr. Yar Zar Myo Min	Mr. Htin Hlaing
+Full Stack Developer	CTO
+One Atkhayar Co., Ltd.	One Atkhayar Co., Ltd.
+yarzar@atkhayar.com	hhlaing@atkhayar.com
+
+
+
